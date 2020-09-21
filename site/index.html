@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>M33081 Nobgorodtsev Nikita</title>
+	<link rel="stylesheet" href="../css/stylesheet.css">
+	<meta lang="ru">
+</head>
+<body>
+
+	<header>
+		<h1>This is my portfolio</h1>
+	</header>
+
+	<article>
+		<nav>
+			<h2>Navigator</h2>
+			<ul class="Content">
+				<li><a href="#About">About me</a></li>
+				<li><a href="#Achiements">My achievements</a></li>
+				<li><a href="#Totem">My totem animal</a></li>
+				<li><a href="#Code">Code</a></li>
+				<li><a href="#Form">Formula</a></li>
+			</ul>
+		</nav>
+		<section id="About">
+			<h2>About me</h2>
+			<div class="Content">
+				<img src="../source/profile.jpg" alt="photo">
+				<p>My name is Novgorodtsev Nikita and I'm twenty. I studied from
+		first to sixth grade at secondary school number 61. and from
+		seventh to eleventh at Kirov Physics and Mathematics Lyceum. I
+		entered in ITMO University in 2018 and I still study here.</p>
+				<blockquote cite="The Wolf of Wall Street">“Without action, the best intentions in the world are nothing more
+	than that: intentions.”</blockquote>
+			</div>
+		</section>
+		<section id=Achiements>
+			<h2>My achievements</h2>
+			<ol class="Content">
+				<li>Graduated from the best lyceum in the city</li>
+				<li>I won a huge number of Olympiads, including the one in which I entered.</li>
+				<li>I went to a large number of sections, including:
+					<ul>
+						<li>Boxing</li>
+						<li>Greco-Roman wrestling</li>
+						<li>dancing</li>
+					</ul>
+				</li>
+				<li>Graduated from a considerable number of courses on coursera</li>
+			</ol>
+		</section>
+		<section id="Totem">
+			<h2>My totem animal</h2>
+			<pre class="Content Panda">░░░░░░░░▄██▄░░░░░░▄▄░░
+░░░░░░░▐███▀░░░░░▄███▌
+░░▄▀░░▄█▀▀░░░░░░░░▀██░
+░█░░░██░░░░░░░░░░░░░░░
+█▌░░▐██░░▄██▌░░▄▄▄░░░▄
+██░░▐██▄░▀█▀░░░▀██░░▐▌
+██▄░▐███▄▄░░▄▄▄░▀▀░▄██
+▐███▄██████▄░▀░▄█████▌
+▐████████████▀▀██████░
+░▐████▀██████░░█████░░
+░░░▀▀▀░░█████▌░████▀░░
+░░░░░░░░░▀▀███░▀▀▀░░░░</pre>
+		</section>
+		<section id=Code>
+			<h2>My code</h2>
+			<pre class="Content"><code>
+<span class="def">import</span> <span class="def">numpy</span> <span class="function">as</span> <span class="def">np</span>
+
+
+
+<span class="def">def</span> <span class="function">cost_function</span>(features, results, theta):
+
+	rows = <span class="function">len</span>(results)
+
+ 	mse = <span class="function">np.sum</span>((<span class="function">np.matmul</span>(theta.<span class="function">transpose()</span>, features[0].transpose()) -
+	results. <span class="function">transpose()</span> ) ** 2)
+
+ 	<span class="def">return</span> mse / (2 * rows)
+
+
+
+<span class="def">def</span> <span class="function">gradient_descent</span>(features, results, theta, alpha, iterations):
+
+ 	rows = <span class="function">len</span>(results)
+
+ 	cost_func = []
+
+ 	<span class="def">for</span> i <span class="def">in</span> <span class="function">range</span>(iterations):
+
+ 		res_hyp = <span class="function">np.matmul</span>(theta.<span class="function">transpose</span>(), features.<span class="function">transpose</span>())
+
+ 		gradient = <span class="function">np.matmul</span>(res_hyp - results.<span class="function">transpose</span>(), features)
+
+ 		theta = (theta.<span class="function">transpose</span>() - alpha * gradient / rows).<span class="function">transpose</span>()
+
+ 		cost_func.<span class="function">append</span>((cost_function(features, results, theta)))
+
+
+ 	<span class="def">return</span> [theta, cost_func]
+			</code></pre>
+		</section>
+		<section id=Form>
+			<h2>Formula</h2>
+			<pre class="Content Formula">0<sup>0</sup> = ? </pre>
+		</section>
+	</article>
+
+	<footer>
+		<a href="https://vk.com/non1pa">vk</a>
+		<a href="https://github.com/paNoNi?tab=repositories">github</a>
+		<a href="">telegram</a>
+	</footer>
+
+</body>
+</html>
