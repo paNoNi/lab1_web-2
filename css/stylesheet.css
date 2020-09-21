@@ -231,3 +231,23 @@ footer {
   background: #8C914F;
   border-radius: 40px
 }
+
+nav > ul > li:nth-child(even):hover {
+  background: #696D3C;
+}
+
+nav > ul > li:nth-child(2n+1):hover {
+  background: #E7D988;
+}
+
+
+nav > ul > li:nth-child(even):active {
+  background: #5E6138;
+}
+
+nav > ul > li:nth-child(2n+1):active {
+  background: #DECD68;
+}
+
+
+
