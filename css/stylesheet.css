@@ -77,6 +77,11 @@ select {
   }
 }
 
+@font-face {
+  font-family: KumbhSans-Regular;
+  src: url("../fonts/KumbhSans-Regular.ttf");
+}
+
 
 h1,
 h2,
@@ -85,6 +90,7 @@ blockquote,
 ul,
 ol,
 .Formula {
+  font-family: KumbhSans-Regular;
   color: #494411;
   font-size: 24px;
 }
